@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marks</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 25px;
+            font-family: Arial, sans-serif;
+            color: #172033;
+
+            background: linear-gradient(
+                120deg,
+                #dbeafe,
+                #fce7f3,
+                #dcfce7,
+                #fde68a,
+                #ddd6fe
+            );
+
+            background-size: 400% 400%;
+            animation: gradientMove 12s ease infinite;
+        }
+
+        @keyframes gradientMove {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        h1 {
+            text-align: center;
+            color: #172554;
+            font-size: 32px;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 4px #00000020;
+        }
+
+        .wrap {
+            max-width: 1000px;
+            margin: 25px auto;
+            padding: 20px;
+            overflow-x: auto;
+            background: rgba(255, 255, 255, 0.92);
+            border: 1px solid #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px #17203330;
+            transition: box-shadow 0.4s ease;
+        }
+
+        .wrap:hover {
+            box-shadow: 0 15px 40px #17203345;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            text-align: center;
+        }
+
+        th,
+        td {
+            border-right: 1px solid #cbd5e1;
+            border-bottom: 1px solid #cbd5e1;
+            padding: 14px 12px;
+        }
+
+        th:first-child,
+        td:first-child {
+            border-left: 1px solid #cbd5e1;
+        }
+
+        thead th {
+            border-top: 1px solid #cbd5e1;
+            background: #172554;
+            color: white;
+            font-size: 15px;
+            letter-spacing: 0.4px;
+        }
+
+        thead th:first-child {
+            border-top-left-radius: 8px;
+        }
+
+        thead th:last-child {
+            border-top-right-radius: 8px;
+        }
+
+        tbody tr:nth-child(odd) {
+            background: #eaf2ff;
+        }
+
+        tbody tr:nth-child(even) {
+            background: #d1fae5;
+        }
+
+        tbody tr {
+            transition:
+                background-color 0.3s ease,
+                color 0.3s ease;
+        }
+
+        tbody tr:hover {
+            background: #bbf7d0;
+            color: #14532d;
+            font-weight: bold;
+        }
+
+        td::before {
+            content: "📍 ";
+        }
+
+        td {
+            position: relative;
+            transform: perspective(800px) rotateY(0deg) scale(1);
+            transform-origin: center;
+            backface-visibility: hidden;
+
+            transition:
+                transform 0.45s ease,
+                background-color 0.3s ease,
+                color 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        td:hover {
+            z-index: 2;
+            position: relative;
+
+            transform:
+                perspective(800px)
+                rotateY(8deg)
+                scale(1.04);
+
+            background: #fef3c7;
+            color: #92400e;
+            font-style: italic;
+            text-decoration: underline dotted;
+            text-underline-offset: 4px;
+
+            box-shadow: 0 5px 12px #00000020;
+        }
+
+        td.grade::after {
+            content: " 🏅";
+        }
+
+        td.grade:hover {
+            background: #fde68a;
+        }
+
+        td:focus-visible {
+            outline: 3px solid #2563eb;
+            outline-offset: -3px;
+        }
+
+        @media (max-width: 650px) {
+            body {
+                padding: 12px;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+
+            .wrap {
+                padding: 10px;
+                border-radius: 10px;
+            }
+
+            th,
+            td {
+                padding: 10px 8px;
+                font-size: 13px;
+            }
+
+            td:hover {
+                transform: perspective(800px) rotateY(4deg) scale(1.02);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Student Marks</h1>
+
+    <div class="wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Roll No.</th>
+                    <th>Name</th>
+                    <th>Subject</th>
+                    <th>Marks</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>101</td>
+                    <td>Aarav Sharma</td>
+                    <td>HTML</td>
+                    <td>88</td>
+                    <td class="grade">A</td>
+                </tr>
+
+                <tr>
+                    <td>102</td>
+                    <td>Priya Patel</td>
+                    <td>CSS</td>
+                    <td>92</td>
+                    <td class="grade">A+</td>
+                </tr>
+
+                <tr>
+                    <td>103</td>
+                    <td>Rohan Mehta</td>
+                    <td>JavaScript</td>
+                    <td>76</td>
+                    <td class="grade">B+</td>
+                </tr>
+
+                <tr>
+                    <td>104</td>
+                    <td>Sana Khan</td>
+                    <td>HTML</td>
+                    <td>81</td>
+                    <td class="grade">A</td>
+                </tr>
+
+                <tr>
+                    <td>105</td>
+                    <td>Dev Shah</td>
+                    <td>CSS</td>
+                    <td>69</td>
+                    <td class="grade">B</td>
+                </tr>
+
+                <tr>
+                    <td>106</td>
+                    <td>Ananya Rao</td>
+                    <td>JavaScript</td>
+                    <td>95</td>
+                    <td class="grade">A+</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

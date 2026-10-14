@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning</title>
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+            padding-top: 65px
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #1e3a8a;
+            color: white;
+            padding: 18px;
+            text-align: center;
+            z-index: 10
+        }
+
+        main {
+            padding: 20px
+        }
+
+        .section {
+            padding: 20px;
+            margin: 18px 0;
+            background: #e0f2fe;
+            min-height: 130px
+        }
+
+        .relative {
+            position: relative;
+            border: 2px solid #0284c7
+        }
+
+        .inner {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #fde68a;
+            padding: 10px
+        }
+
+        .sticky {
+            position: sticky;
+            top: 65px;
+            background: #dcfce7;
+            border: 2px solid #16a34a;
+            z-index: 5
+        }
+
+        .static {
+            position: static;
+            background: #f3e8ff;
+            padding: 20px
+        }
+
+        footer {
+            background: #222;
+            color: black;
+            padding: 25px;
+            text-align: center
+        }
+    </style>
+</head>
+
+<body>
+    <header>Fixed Header</header>
+    <main>
+        <h1>CSS Positioning Properties</h1>
+        <section class="section">
+            <h2>Normal Content</h2>
+        </section>
+        <section class="section relative">
+            <h2>Relative Position</h2>
+            <div class="inner">Absolutely positioned box</div>
+        </section>
+        <section class="section sticky">
+            <h2>Sticky Section</h2>
+        </section>
+        <section class="section">
+            <h2>Content</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis tempora cum est provident, aliquid, vel
+                non asperiores dolor magnam officia, optio molestias? At totam accusantium aperiam exercitationem aut
+                quidem natus recusandae dignissimos cumque dolore ex ea quisquam labore ducimus debitis aspernatur fuga,
+                in officiis aliquam distinctio atque quibusdam tempora earum alias? Nemo suscipit accusantium a harum
+                reprehenderit fugit ipsa quis commodi debitis enim ipsum, soluta quae asperiores molestias velit
+                doloremque, inventore et aliquam laborum? Impedit itaque quaerat ad, labore quod numquam in expedita
+                saepe ipsa nam dicta atque, dolor nulla mollitia dignissimos veniam, cum doloribus quis quam delectus
+                molestias! Fugit?</p>
+
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati commodi doloremque voluptatibus
+                voluptatum. Reprehenderit, asperiores, repellendus cumque omnis illum aliquid maiores deserunt
+                accusantium, ad doloribus inventore corrupti magni pariatur. Provident eum optio voluptatem molestiae
+                nihil vel. Quidem repellendus distinctio rerum? Eius aspernatur fuga temporibus officia pariatur,
+                eligendi ex ea sunt sit laboriosam rem ducimus totam! Nulla maxime earum nostrum ea totam voluptatum,
+                tenetur sint rerum commodi quas, pariatur nobis ipsum maiores. Deleniti iure quidem sint similique
+                assumenda nemo illo voluptatibus rem consequatur, corporis illum, vero earum sit placeat a molestias
+                nisi, nam inventore consectetur adipisci qui reiciendis eum. Dolores, nam?</p>
+        </section>
+        <section class="section">
+            <h2>Section</h2>
+        </section>
+        <footer class="static">Static Footer</footer>
+    </main>
+</body>
+
+</html>

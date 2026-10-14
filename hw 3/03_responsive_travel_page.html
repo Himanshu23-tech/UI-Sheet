@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Travel and Adventure</title>
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #f4f7f8;
+            color: #253746;
+            transition: .3s
+        }
+
+        header {
+            padding: 28px 8%;
+            background: #164e63;
+            color: white
+        }
+
+        h1 {
+            margin: 0 0 10px;
+            font-size: 36px
+        }
+
+        .hero {
+            min-height: 360px;
+            padding: 65px 8%;
+            background: linear-gradient(90deg, #102a43bb, #102a4340), url('travel.jpg') center/cover no-repeat;
+            color: white
+        }
+
+        .hero h2 {
+            font-size: 38px;
+            letter-spacing: 2px;
+            text-transform: uppercase
+        }
+
+        .hero p {
+            max-width: 600px;
+            font-size: 18px;
+            line-height: 1.7
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 25px auto;
+            padding: 0 20px;
+            line-height: 1.7
+        }
+
+        @media(min-width:800px) {
+            body {
+                background: #e4f2ed
+            }
+
+            header {
+                background: #0f766e
+            }
+
+            .hero {
+                background-image: linear-gradient(90deg, #075985cc, #0f766e55), url('travel.jpg')
+            }
+        }
+
+        @media(max-width:500px) {
+            header {
+                padding: 22px 20px
+            }
+
+            h1 {
+                font-size: 27px
+            }
+
+            .hero {
+                min-height: 300px;
+                padding: 30px 20px
+            }
+
+            .hero h2 {
+                font-size: 27px
+            }
+
+            .hero p {
+                font-size: 15px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Travel and Adventure</h1>
+        <p>Discover new places, meet new people, and create memories.</p>
+    </header>
+    <section class="hero">
+        <h2>Explore the World</h2>
+        <p>From peaceful beaches to beautiful mountains, every journey has a story waiting to be discovered.</p>
+    </section>
+    <main>
+        <h2>Plan Your Next Trip</h2>
+        <p>Choose a destination that inspires you. Pack light, respect local cultures, keep your documents safe, and
+            enjoy every moment of your adventure. Resize the page to see the design adapt.</p>
+    </main>
+</body>
+
+</html>
